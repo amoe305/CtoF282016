@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="ctofApp">
+
+<head>
+    <title>Converter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular.min.js"></script>
+    <script type="text/javascript" src="converter.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="ConverterController as cc">
+
+        <input ng-model="cc.inputTempValue" type="text" placeholder="Temperature" />
+        <button type="button" ng-click="cc.ctofConverter()" ng-hide="cc.hidectof"> C to F</button>
+        <button type="button" ng-click="cc.ftocConverter()" ng-hide="cc.hideftoc"> F to C</button>
+
+        <p>
+            The Answer: {{cc.answer}}
+        </p>
+    </div>
+</body>
+
+</html>
